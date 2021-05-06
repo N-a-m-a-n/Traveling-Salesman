@@ -158,7 +158,7 @@ export default function App() {
 
         <InputBox address = {address} setAddress = {setAddress} handleSelect = {handleSelect}/>
         
-//         <Compass mapRef = {mapRef} />
+        <Compass mapRef = {mapRef} />
 
         <GoogleMap 
             className = "map"
@@ -171,7 +171,6 @@ export default function App() {
         >
             {markers.map((marker, index) => (
                 <Marker 
-                    // className = "marker"
                     key = {index} 
                     position = {{lat : marker.lat, lng : marker.lng }}
                     icon = {{
