@@ -11,7 +11,7 @@ import InputBox from './components/InputBox';
 import Compass from './components/Compass';
 import Directions from './components/Directions';
 
-// require('dotenv').config();
+require('dotenv').config();
 
 const mapContainerStyle = {
     width : '100vw',
@@ -158,7 +158,7 @@ export default function App() {
 
         <InputBox address = {address} setAddress = {setAddress} handleSelect = {handleSelect}/>
         
-        <Compass mapRef = {mapRef} />
+//         <Compass mapRef = {mapRef} />
 
         <GoogleMap 
             className = "map"
