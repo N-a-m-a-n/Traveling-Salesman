@@ -76,7 +76,7 @@ export default function App() {
         const geocoder = new window.google.maps.Geocoder();
         const latLng = {
             lat : event.latLng.lat(),
-            lng : event.latLng.lng()
+            lng : event.latLng.lng(),
         }
         geocoder.geocode({location : latLng}, (results, status) => {
             if(status === "OK"){
