@@ -11,6 +11,8 @@ import InputBox from './components/InputBox';
 import Compass from './components/Compass';
 import Directions from './components/Directions';
 
+require('dotenv').config();
+
 const mapContainerStyle = {
     width : '100vw',
     height : '100vh'
