@@ -171,7 +171,6 @@ export default function App() {
         >
             {markers.map((marker, index) => (
                 <Marker 
-                    // className = "marker"
                     key = {index} 
                     position = {{lat : marker.lat, lng : marker.lng }}
                     icon = {{
