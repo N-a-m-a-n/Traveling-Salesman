@@ -13,7 +13,7 @@ export default function inputBox(props){
                         {suggestions.map((suggestion, index) => {
                             const style = {
                                 backgroundColor : suggestion.active ? "rgba(8, 217, 214, 0.35)" : "#fff",
-                                width : "103%"
+                                width : "100%"
                             }
                             return (
                                 <div key = {index} className = "suggestions" {...getSuggestionItemProps( suggestion, {style})}>
