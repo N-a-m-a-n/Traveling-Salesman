@@ -15,6 +15,7 @@ export default function AddNotePopup({notes, setNotes, toggleAddNote, noteIndex,
     function handleChange(event) {
         const { name, value } = event.target;
         // console.log(event.target);
+        event.preventDefault();
         setNote(prevNote => {
             return {
                 ...prevNote,
@@ -24,7 +25,8 @@ export default function AddNotePopup({notes, setNotes, toggleAddNote, noteIndex,
         });
     }
 
-    function AddNote(){
+    function AddNote(event){
+        event.preventDefault();
         
         if(noteIndex.current === -1){
             setNotes(prevNotes => {
@@ -53,7 +55,7 @@ export default function AddNotePopup({notes, setNotes, toggleAddNote, noteIndex,
             {/* {console.log(noteIndex.current)} */}
             <input name = "title" onChange = {handleChange} value = {note.title} placeholder = "Title"/>
             <textarea name = "content" onChange = {handleChange} value = {note.content} placeholder = "Take a note.."/>
-            <AddIcon className = "popup-button" onClick = {() => AddNote()}/>
+            <AddIcon className = "popup-button" onClick = {(e) => AddNote(e)}/>
         </form>
     )
 }

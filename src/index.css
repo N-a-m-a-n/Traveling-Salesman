@@ -15,7 +15,6 @@ body {
 
 .search-icons-container{
   position: absolute;
-<<<<<<< HEAD
   z-index: 12;
   /* background-color: #ee99; */
   display: flex;
@@ -46,10 +45,6 @@ body {
 
 .notesButton{
   /* position: relative; */
-=======
-  top: 10%;
-  right: 0.1%;
->>>>>>> fabedc78d452b43f67196ea93e9b015d6ae7e130
   background: none;
   border: none;
   z-index: 10;
@@ -229,7 +224,6 @@ body {
 
 
 .searchBox{
-<<<<<<< HEAD
   width: 400px;
 	/* height: 100px; */
   z-index: 10;
@@ -240,16 +234,6 @@ body {
 	/* left: 0;
 	right: 0; */
   /* margin: auto; */
-=======
-  width: 30%;
-  min-width: 150px;
-  z-index: 10;
-  position: absolute;
-  top: 3%;
-	left: 0;
-	right: 0;
-  margin: auto;
->>>>>>> fabedc78d452b43f67196ea93e9b015d6ae7e130
 }
 
 .inputBox{
@@ -296,7 +280,6 @@ body {
   font-weight: 500;
 }
 
-<<<<<<< HEAD
 .compass{
   position: absolute;
   top: 6rem;
@@ -316,14 +299,6 @@ body {
 }
 
 
-=======
-.infowindow-content{
-  margin: 0px;
-  width: 200px;
-  min-width: 130px;
-}
-
->>>>>>> fabedc78d452b43f67196ea93e9b015d6ae7e130
 .infowindow-content p{
   width: 76%;
   display: inline-block;
@@ -384,13 +359,8 @@ body {
 .directions-choose-box{
   position: absolute;
   z-index: 10;
-<<<<<<< HEAD
   top: 45rem;
   right: 7rem;
-=======
-  bottom: 2%;
-  right: 4.5%;
->>>>>>> fabedc78d452b43f67196ea93e9b015d6ae7e130
   background: rgba(238, 238, 238, 0.9);
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
@@ -466,13 +436,8 @@ body {
 
 .route-box{
   position: absolute;
-<<<<<<< HEAD
   top: 40rem;
   left: 2rem;
-=======
-  bottom: 3.5%;
-  left: 2%;
->>>>>>> fabedc78d452b43f67196ea93e9b015d6ae7e130
   z-index: 10;
   background: rgba(238, 238, 238, 0.9);
   border-radius: 2px;
@@ -544,17 +509,10 @@ body {
 
 
 .stepDirectionsBox{
-<<<<<<< HEAD
   width: 400px;
   position: relative;
   top: 42rem;
   left: 2rem;
-=======
-  width: 33%;
-  position: absolute;
-  bottom: 3.5%;
-  left: 2%;
->>>>>>> fabedc78d452b43f67196ea93e9b015d6ae7e130
   z-index: 10;
   background: rgba(238, 238, 238, 0.9);
   border-radius: 2px;
