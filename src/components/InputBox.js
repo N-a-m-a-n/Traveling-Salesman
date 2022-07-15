@@ -8,12 +8,12 @@ export default function inputBox(props){
                 <div className = "searchBox">
 
                     <input className = "inputBox" {...getInputProps({placeholder : "Type Address"})}/>
-                    <div>
+                    <div className = "suggestionsBox">
                         {loading ? <div>...loading places</div> : null}
                         {suggestions.map((suggestion, index) => {
                             const style = {
                                 backgroundColor : suggestion.active ? "rgba(8, 217, 214, 0.35)" : "#fff",
-                                width : "103%"
+                               // width : "103%"
                             }
                             return (
                                 <div key = {index} className = "suggestions" {...getSuggestionItemProps( suggestion, {style})}>

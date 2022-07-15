@@ -6,10 +6,277 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.search-icons-container{
+  position: absolute;
+  z-index: 12;
+  /* background-color: #ee99; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 5px; */
+  padding-left: 1rem;
+  top: 1.5rem;
+  left: 33%;
+  right: 15rem;
+}
+
+.search-icons-container ul{
+  display: inline-flex;
+  list-style: none;
+}
+
+.search-icons-container ul li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+
+.notesUser{
+  position: relative;
+  display: inline-block;
+}
+
+.notesButton{
+  /* position: relative; */
+  background: none;
+  border: none;
+  z-index: 10;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.6));
+  outline: none;
+}
+
+.userButton{
+  /* position: relative; */
+  
+  background: none;
+  border: none;
+  border-color: black;
+  border-radius: 100%;
+  z-index: 10;
+  /* filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.6)); */
+  outline: none;
+  /* width: 45px;
+  height:45px; */
+  size: 100px;
+  /* font-size: 100px; */
+}
+
+.notes-content-box {
+  display: block;
+  position: absolute;
+  top: 55px;
+  width: 30rem;
+  left: -15rem;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 1;
+  overflow: hidden; 
+  overflow-y: scroll;
+  height: auto;
+  max-height: 335px;
+}
+
+.notes-box{
+  padding: 10px 10px 20px 10px;
+}
+
+.note{
+  /* border-color: #2980B9; */
+  /* color: #2980B9; */
+  /* border: 2px; */
+  /* border-radius: 5%; */
+  /* margin: 5px; */
+  cursor: pointer;
+  padding: 5px;
+  /* background-color: #f5ba13; */
+}
+
+.note h3{
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.note p{
+  margin-bottom: 0px;
+}
+
+.note-date{
+  position: relative;
+  text-align: right;
+  font-size: 10px;
+}
+
+.note:hover{
+  background-color: #eeeeee;
+}
+
+.heading{
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+#app_element_id.active{
+  filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+}
+
+#popup-addNote{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 40px 70px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#popup-addNote.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#popup-addNote input{
+  width: 100%;
+}
+
+#popup-addNote textarea{
+  width: 100%;
+}
+
+#popup-showNote{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 40px 70px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#popup-showNote.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.popup-button{
+  background: #f5ba13;
+  cursor: pointer;
+}
+
+.user-content-box{
+  display: block;
+  position: absolute;
+  top: 50px;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: hidden; 
+  overflow-y: scroll;
+  width: 300px;
+  height: auto;
+  right: -80px;
+  max-height: 335px;
+}
+
+.user-image{
+  margin: 10px;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  display: inline;
+}
+
+.user-name{
+  display: inline;
+}
+
+/* .dropdownNotes{
+  background: none;
+  border: none;
+  z-index: 10;
+
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.6));
+  outline: none;
+} */
+
+
+
+
+.searchBox{
+  width: 400px;
+	/* height: 100px; */
+  z-index: 10;
+  position: relative;
+  display: inline-block;
+  /* position: relative; */
+  /* top:30px; */
+	/* left: 0;
+	right: 0; */
+  /* margin: auto; */
+}
+
+.inputBox{
+  position: relative;
+  padding: 10px;
+  width: 400px;
+  box-shadow: 0px 8px 20px rgb(138, 137, 137);
+  border : none;
+  border-radius: .3rem;
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: inherit;
+  border-bottom: .3rem solid transparent;
+  /* display: block; */
+  transition: all .3s; 
+}
+
+.inputBox:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 0.4rem solid rgba(245, 186, 19, 0.8); 
+}
+.inputBox::-webkit-input-placeholder {
+  color: #999; 
+}
+
+.suggestionsBox{
+  display: block;
+  position: absolute;
+  top: 45px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: hidden; 
+  overflow-y: scroll;
+  width: 400px;
+  height: auto;
+  max-height: 335px;
+}
+
+.suggestions{
+  padding: 10px 5px 10px 5px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .compass{
   position: absolute;
-  top: 4rem;
-  right: 0.1rem;
+  top: 6rem;
+  right: 0.2rem;
   background: none;
   border: none;
   z-index: 10;
@@ -24,46 +291,6 @@ body {
   transform: rotate(720deg);
 }
 
-.searchBox{
-  width: 400px;
-	height: 100px;
-  z-index: 10;
-  position: absolute;
-  top:30px;
-	left: 0;
-	right: 0;
-  margin: auto;
-}
-
-.inputBox{
-  padding: 10px;
-  width: 400px;
-  box-shadow: 0px 8px 20px rgb(138, 137, 137);
-  border : none;
-  border-radius: .3rem;
-  color: inherit;
-  background-color: rgba(255, 255, 255, 0.5);
-  font-family: inherit;
-  border-bottom: .3rem solid transparent;
-  display: block;
-  transition: all .3s; 
-}
-
-.inputBox:focus {
-  outline: none;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-  border-bottom: 0.4rem solid rgba(245, 186, 19, 0.8); 
-}
-.inputBox::-webkit-input-placeholder {
-  color: #999; 
-}
-
-.suggestions{
-  padding: 10px 5px 10px 5px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-}
 
 .infowindow-content p{
   display: inline-block;
@@ -123,8 +350,8 @@ body {
 .directions-choose-box{
   position: absolute;
   z-index: 10;
-  top: 28rem;
-  right: 4rem;
+  top: 45rem;
+  right: 7rem;
   background: rgba(238, 238, 238, 0.9);
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
@@ -161,8 +388,8 @@ body {
 
 .route-box{
   position: absolute;
-  top: 26.4rem;
-  left: 1.2rem;
+  top: 40rem;
+  left: 2rem;
   z-index: 10;
   background: rgba(238, 238, 238, 0.9);
   border-radius: 2px;
@@ -283,7 +510,7 @@ body {
 .stepDirectionsBox{
   width: 400px;
   position: relative;
-  top: 27.5rem;
+  top: 42rem;
   left: 2rem;
   z-index: 10;
   background: rgba(238, 238, 238, 0.9);
@@ -331,6 +558,7 @@ body {
   overflow: auto;
   width: 350px;
 }
+
 
 .dropbtn {
   background-color: rgba(52, 152, 219,0.05);
