@@ -194,6 +194,7 @@ export default function App() {
 
     <div>
 
+<<<<<<< HEAD
         <div id = "app_element_id">
             
             <RemoveScrollBar/>
@@ -230,6 +231,47 @@ export default function App() {
                 options = {options}
                 onClick = {onMapClick}
                 onLoad = {onMapLoad}
+=======
+        <InputBox address = {address} setAddress = {setAddress} handleSelect = {handleSelect}/>
+        
+        <Compass mapRef = {mapRef} />
+
+        <GoogleMap 
+            className = "map"
+            mapContainerStyle={mapContainerStyle} 
+            zoom = {8} 
+            center = {center}
+            options = {options}
+            onClick = {onMapClick}
+            onLoad = {onMapLoad}
+        >
+            {markers.map((marker, index) => (
+                <Marker 
+                    key = {index} 
+                    position = {{lat : marker.lat, lng : marker.lng }}
+                    icon = {{
+                        url : './images/marker4.svg',
+                        scaledSize : new window.google.maps.Size(30,30),
+                        origin : new window.google.maps.Point(0,0),
+                        anchor : new window.google.maps.Point(15,35),
+                    }}
+                    animation = {window.google.maps.Animation.DROP}
+                    onClick = {() => {
+                        setSelected({...marker, index});
+                    }}
+                    draggable = {true}
+                    onDragEnd = {(e) => markerDrag(e,index)}
+                />  
+            ))}
+
+            {selected && (<InfoWindow
+                position = {{lat : selected.lat, lng : selected.lng}}
+                // anchor = {new window.google.maps.Point(0,0)}
+                options = {{pixelOffset : new window.google.maps.Size(0,-30)}}
+                onCloseClick = {() => {
+                    setSelected(null);                    
+                }}
+>>>>>>> fabedc78d452b43f67196ea93e9b015d6ae7e130
             >
                 {markers.map((marker, index) => (
                     <Marker 
